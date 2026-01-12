@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Imunisasi - Posyandu</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="imunisasi">
+  <div class="sidebar">
+    <h2>Posyandu</h2>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="balita.html">Data Balita</a></li>
+      <li><a href="ibu.html">Data Ibu Hamil</a></li>
+      <li><a href="imunisasi.html" class="active">Imunisasi</a></li>
+      <li><a href="pertumbuhan.html">Pertumbuhan</a></li>
+      <li><a href="jadwal.html">Jadwal</a></li>
+      <li><a href="laporan.html">Laporan</a></li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <header><h1>Data Imunisasi</h1></header>
+
+    <form class="form" id="imunForm">
+      <label>Nama Balita</label>
+      <input name="nama" placeholder="Nama balita" required>
+      <label>Jenis Imunisasi</label>
+      <select name="jenis" required>
+        <option value="">Pilih...</option>
+        <option>BCG</option>
+        <option>Polio</option>
+        <option>DPT</option>
+        <option>Campak</option>
+        <option>Hepatitis B</option>
+      </select>
+      <label>Tanggal</label>
+      <input name="tanggal" type="date" required>
+      <button type="submit">Simpan</button>
+    </form>
+
+    <div class="table-box">
+      <table>
+        <thead><tr><th>No</th><th>Nama</th><th>Jenis</th><th>Tanggal</th><th>Aksi</th></tr></thead>
+        <tbody id="tbodyImun"></tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

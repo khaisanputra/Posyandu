@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Posyandu</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2><i class="fa-solid fa-house-medical"></i> Posyandu</h2>
+    <ul>
+      <li><a href="index.html" class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+      <li><a href="#" id="openForm"><i class="fa-solid fa-pen"></i> Input Data</a></li>
+      <li><a href="#"><i class="fa-solid fa-file-lines"></i> Laporan</a></li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <header>
+      <h1>Dashboard Posyandu</h1>
+      <p>Selamat datang di Sistem Informasi Posyandu 🌸</p>
+    </header>
+
+    <div class="cards">
+      <div class="card pink">
+        <i class="fa-solid fa-baby"></i>
+        <h3>Jumlah Balita</h3>
+        <p id="balitaCount">0</p>
+      </div>
+      <div class="card blue">
+        <i class="fa-solid fa-person-pregnant"></i>
+        <h3>Ibu Hamil</h3>
+        <p id="ibuCount">0</p>
+      </div>
+      <div class="card green">
+        <i class="fa-solid fa-calendar-day"></i>
+        <h3>Jadwal Terdekat</h3>
+        <p id="jadwal">Belum ada</p>
+      </div>
+    </div>
+
+    <div class="chart">
+      <h2><i class="fa-solid fa-chart-column"></i> Grafik Pertumbuhan Balita</h2>
+      <div class="chart-box">
+        <p>Belum ada data yang dimasukkan.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form input data -->
+  <div class="modal" id="dataForm">
+    <div class="modal-content">
+      <h2>Input Data Posyandu</h2>
+      <label>Jumlah Balita:</label>
+      <input type="number" id="inputBalita" min="0" placeholder="Contoh: 10">
+      
+      <label>Jumlah Ibu Hamil:</label>
+      <input type="number" id="inputIbu" min="0" placeholder="Contoh: 5">
+
+      <label>Jadwal Terdekat:</label>
+      <input type="date" id="inputJadwal">
+
+      <button id="saveData">Simpan</button>
+      <button id="closeForm">Tutup</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

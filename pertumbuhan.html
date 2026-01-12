@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Pertumbuhan - Posyandu</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="pertumbuhan">
+  <div class="sidebar">
+    <h2>Posyandu</h2>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="balita.html">Data Balita</a></li>
+      <li><a href="ibu.html">Data Ibu Hamil</a></li>
+      <li><a href="imunisasi.html">Imunisasi</a></li>
+      <li><a href="pertumbuhan.html" class="active">Pertumbuhan</a></li>
+      <li><a href="jadwal.html">Jadwal</a></li>
+      <li><a href="laporan.html">Laporan</a></li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <header><h1>Pertumbuhan Balita</h1></header>
+
+    <form class="form" id="growthForm">
+      <label>Nama Balita</label>
+      <input name="nama" placeholder="Nama balita" required>
+      <label>Berat Badan (kg)</label>
+      <input name="berat" type="number" step="0.1" required>
+      <label>Tinggi Badan (cm)</label>
+      <input name="tinggi" type="number" step="0.1" required>
+      <label>Tanggal</label>
+      <input name="tanggal" type="date" required>
+      <button type="submit">Simpan</button>
+    </form>
+
+    <div class="table-box">
+      <table>+
+        <thead><tr><th>No</th><th>Nama</th><th>Berat (kg)</th><th>Tinggi (cm)</th><th>Tanggal</th><th>Aksi</th></tr></thead>
+        <tbody id="tbodyGrowth"></tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

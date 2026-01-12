@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Jadwal Posyandu</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="jadwal">
+  <div class="sidebar">
+    <h2>Posyandu</h2>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="balita.html">Data Balita</a></li>
+      <li><a href="ibu.html">Data Ibu Hamil</a></li>
+      <li><a href="imunisasi.html">Imunisasi</a></li>
+      <li><a href="pertumbuhan.html">Pertumbuhan</a></li>
+      <li><a href="jadwal.html" class="active">Jadwal</a></li>
+      <li><a href="laporan.html">Laporan</a></li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <header><h1>Jadwal Posyandu</h1></header>
+
+    <form class="form" id="jadwalForm">
+      <label>Tanggal</label>
+      <input name="tanggal" type="date" required>
+      <label>Tempat</label>
+      <input name="tempat" placeholder="Tempat kegiatan" required>
+      <label>Keterangan</label>
+      <input name="keterangan" placeholder="Mis: pemeriksaan balita" >
+      <button type="submit">Simpan</button>
+    </form>
+
+    <div class="table-box">
+      <table>
+        <thead><tr><th>No</th><th>Tanggal</th><th>Tempat</th><th>Keterangan</th><th>Aksi</th></tr></thead>
+        <tbody id="tbodyJadwal"></tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
